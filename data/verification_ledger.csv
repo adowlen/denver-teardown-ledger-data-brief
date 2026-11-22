@@ -1,0 +1,22 @@
+figure,builder,verifier,status
+demolished parcels in window,3281,3281,REPRODUCED
+rebuilt parcels,2326,2326,REPRODUCED
+paired cycles,616,616,REPRODUCED
+paired median buy,650000.0,650000.0,REPRODUCED
+paired median sell,2299762.5,2299762.5,REPRODUCED
+paired median spread,1635000.0,1635000.0,REPRODUCED
+demolished with observable pre-demo buy,1913,1913,REPRODUCED
+removed buys at or under $500K,421,421,REPRODUCED
+removed median buy,711000.0,711000.0,REPRODUCED
+demolished parcels in zero-restricted neighborhoods,758,758,REPRODUCED
+paired cycles in zero-restricted neighborhoods,260,260,REPRODUCED
+paired median spread in zero-restricted neighborhoods,1948750.0,1948750.0,REPRODUCED
+paired median spread elsewhere,1382500.0,1382500.0,REPRODUCED
+HOST inventory projects (raw pull),497,497,REPRODUCED
+HOST inventory restricted units (raw pull),29474,29474,REPRODUCED
+zero-restricted neighborhood list matches raw pull,"Auraria,Barnum West,Belcaro,Cory - Merrill,Country Club,Goldsmith,Hilltop,Indian Creek,Kennedy,Marston,North Park Hill,Southmoor Park,Washington Park,Wellshire,Windsor","Auraria,Barnum West,Belcaro,Cory - Merrill,Country Club,Goldsmith,Hilltop,Indian Creek,Kennedy,Marston,North Park Hill,Southmoor Park,Washington Park,Wellshire,Windsor",REPRODUCED
+panel restricted units total,29389,29389,REPRODUCED
+"Spearman rho, register vs spine demolition counts by neighborhood",0.974,cross-basis,RECORDED
+top-3 neighborhoods agree across bases,"['Washington Park', 'Berkeley', 'Sloan Lake']","['Washington Park', 'Berkeley', 'Sloan Lake']",RECORDED
+Washington Park demolished (panel),268,268,REPRODUCED
+"Washington Park teardown rate per 1,000 parcels",75.0,75.0,REPRODUCED

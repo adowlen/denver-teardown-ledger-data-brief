@@ -1,0 +1,29 @@
+== Section 10.1 pre-flight audit ==
+sales rows total=314041; zero/null/nonpositive price rows=56182; market-sale rows among them=0 (asserted)
+INSTRUMENT counter (full sales table): {"WD": 158468, "QC": 55538, "SW": 55468, "PR": 9981, "PS": 9428, "DC": 6626, "DL": 3139, "BS": 2804, "DE": 1862, "DD": 1627, "BF": 1247, "TR": 1222, "AF": 1193, "PT": 1047, "GW": 923, "BG": 770, "CD": 687, "PC": 341, "CS": 320, "PL": 315, "DS": 150, "SC": 147, "TT": 122, "SF": 99, "AD": 80, "NC": 71, "GR": 64, "MG": 46, "DF": 34, "AG": 33, "PB": 27, "nan": 26, "TS": 23, "GF": 18, "RC": 15, "LE": 13, "OR": 12, "VD": 9, "OC": 8, "WI": 7, "TN": 5, "ST": 5, "CC": 4, "EX": 3, "MC": 3, "BK": 2, "MH": 2, "EA": 2, "DU": 2, "RL": 1, "RV": 1, "CM": 1}
+D_CLASS_N counter (top 12): {"SFR Grade C": 80492, "RESIDENTIAL-CONDOMINIUM": 67023, "RESIDENTIAL-ROWHOUSE": 54172, "SFR Grade C, D, or E, w/RK": 41771, "SFR Grade B": 28352, "SFR Grade B w/RK": 8516, "SFR Grade A": 6221, "VACANT LAND /GENERAL COMMON EL": 3104, "RESIDENTIAL-DUPLEX": 2793, "INDUSTRIAL-WAREHOUSE": 2128, "VACANT LAND": 2107, "SFR Grade D or E": 1885}
+polarity sample INSIDE market filter:
+INSTRUMENT  SALE_PRICE  SALE_YEAR
+        WD   9350000.0       2015
+        SW  13500000.0       2022
+        WD  22660000.0       2017
+polarity sample OUTSIDE (QC/PR/DC):
+INSTRUMENT  SALE_PRICE  SALE_YEAR
+        QC        10.0       2023
+        QC    580085.0       2024
+        QC        10.0       2022
+population on 2026-11-01 snapshot: market sales 2020+ = 105998 (published 2026-10-15 snapshot: 105,585; delta +413); rows dated after the snapshot and excluded from dated figures = 1
+RECONCILIATION citywide (2026-11-01 snapshot): {'demolished': 3281, 'rebuilt': 2326, 'paired': 616, 'median_buy': 650000.0, 'median_sell': 2299762.5, 'median_spread': 1635000.0}
+RECONCILIATION citywide (published, 2026-10-15 snapshot): {'demolished': 3297, 'rebuilt': 2335, 'paired': 611, 'median_buy': 650000.0, 'median_sell': 2299525.0, 'median_spread': 1635000.0}
+RECONCILIATION Washington Park (2026-11-01 snapshot): {'demolished': 268, 'rebuilt': 237, 'paired': 87, 'median_buy': 1000000.0, 'median_sell': 3100000.0, 'median_spread': 2140000.0}
+RECONCILIATION Washington Park (published): {'demolished': 268, 'rebuilt': 237, 'paired': 85, 'median_spread': 2140000.0}
+RECONCILIATION WITHIN BAND: all lifecycle counts within 3% of the published figures; deltas are recordings posted between the 2026-10-15 and 2026-11-01 snapshots.
+demolished parcels with an observable pre-demolition market buy: 1913 of 3281
+boundary tie rule stats (lifecycle + removed passes combined): {"buy_ties": 101, "buy_nominal_excluded": 5, "exit_ties": 1, "exit_nominal_excluded": 0}
+UNITS coverage: {"new_building_permits": {"rows": 11585, "units_present_pct": 55.9, "units_numeric_pct": 55.9, "units_positive_pct": 55.6, "units_zero_rows": 31}, "demolition_permits": {"rows": 3836, "units_present_pct": 41.4, "units_numeric_pct": 41.4, "units_positive_pct": 40.5, "units_zero_rows": 33}}
+permit-register window counts on the refreshed layers: new-building 11585 (published 11,585), demolition 3836 (published 3,837)
+join coverage: parcels with a statistical neighborhood 240390 of 240496 (99.96%); demolished parcels unassigned 0 of 3281 (counted citywide, in no neighborhood row)
+censoring: {"demolitions_final_12_months": 459, "rebuilt_share_final_12_months_pct": 46.0, "demolitions_earlier": 2822, "rebuilt_share_earlier_pct": 74.9}
+boundary: {"on_demolition_date": 0, "on_permit_date": 1, "between_demolition_and_permit": 76}
+missing side: {"rebuilt": 2326, "with_buy": 1424, "with_exit": 1019, "paired": 616}
+missing side (under-10-paired neighborhoods): {"rebuilt": 497, "with_buy": 208, "with_exit": 207, "paired": 47}

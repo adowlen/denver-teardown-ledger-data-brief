@@ -1,0 +1,5 @@
+Headline: 42.2%
+Sub: of Denver's 616 completed teardown cycles closed in neighborhoods where the HOST inventory records no income-restricted homes
+Source line: Machine Readable - Denver assessor sales, permit and demolition registers, and HOST income-restricted inventory, January 2020 - October 2026 (warehouse snapshot 2026-11-01)
+Story the art tells: a modest older house mid-demolition on one side of a Denver street, excavator in the rubble, and across the street the large new house that replaces it, windows lit amber, towering over the block. The replacement is the story: the cycle completes most often, and at the largest spreads, in the neighborhoods where the restricted inventory records nothing.
+Art: hero_source/media-generation-hero-art-0-18838217-5788-4798-88ad-9e0f4e1ad777.webp (generated illustration, brand palette: dark charcoal, amber, teal); headline composited by code/hero_composite.py with all figures read from stats.json. Alternate headline considered: $1,635,000 (median gross spread). The 42.2% figure was chosen because it matches the brief's title and thesis and reads cleanly at catalog-card size (verified at 480px wide).

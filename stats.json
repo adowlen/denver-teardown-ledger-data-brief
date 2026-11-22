@@ -1,0 +1,426 @@
+{
+ "meta": {
+  "brief": "Denver: The Teardown Ledger (meta-analysis, DRAFT - not published)",
+  "built": "2026-11-17",
+  "window": "first demolition date 2020-01-01 to 2026-10-12 (the source briefs' window); warehouse snapshot 2026-11-01 (the October briefs used the 2026-10-15 snapshot; see reconciliation)",
+  "bases": "Parcel basis (assessor spine) for demolitions, rebuilds and paired cycles; permit-register basis (11,585 new-building permits, 3,837 demolition permits) is the 2026-10-15 brief's basis and is NOT mixed into parcel-basis figures.",
+  "index_method": "Equal-weight mean of three percentile ranks across qualifying neighborhoods (demolitions >= 30 and paired cycles >= 10; Sun Valley excluded, see caveats): teardown rate per 1,000 parcels; median paired gross spread; backstop absence = 100 - percentile of restricted units per 1,000 ACS housing units."
+ },
+ "reconciliation_against_2026_10_16_package": {
+  "note": "Published figures ran on the warehouse 2026-10-15 snapshot; this package runs on the 2026-11-01 re-snapshot of the same services. Deltas are recordings posted between snapshots.",
+  "published": {
+   "citywide": {
+    "demolished": 3297,
+    "rebuilt": 2335,
+    "paired": 611,
+    "median_buy": 650000.0,
+    "median_sell": 2299525.0,
+    "median_spread": 1635000.0
+   },
+   "washington_park": {
+    "demolished": 268,
+    "rebuilt": 237,
+    "paired": 85,
+    "median_spread": 2140000.0
+   }
+  },
+  "this_snapshot_citywide": {
+   "demolished": 3281,
+   "rebuilt": 2326,
+   "paired": 616,
+   "median_buy": 650000.0,
+   "median_sell": 2299762.5,
+   "median_spread": 1635000.0
+  },
+  "this_snapshot_washington_park": {
+   "demolished": 268,
+   "rebuilt": 237,
+   "paired": 87,
+   "median_buy": 1000000.0,
+   "median_sell": 3100000.0,
+   "median_spread": 2140000.0
+  }
+ },
+ "citywide": {
+  "parcels_total": 240496,
+  "parcels_without_neighborhood": 106,
+  "demolished_without_neighborhood": 0,
+  "demolished_in_window": 3281,
+  "rebuilt": 2326,
+  "rebuilt_share_pct": 70.9,
+  "paired_cycles": 616,
+  "paired_median_buy": 650000.0,
+  "paired_median_sell": 2299762.5,
+  "paired_median_spread": 1635000.0,
+  "paired_median_ratio": 3.45,
+  "paired_median_months": 28.3,
+  "removed_with_observable_buy": 1913,
+  "removed_median_buy": 711000.0,
+  "removed_buys_le500k": 421,
+  "removed_buys_le500k_share_pct": 22.0,
+  "share_le500k_citywide_2020": 57.2,
+  "share_le500k_citywide_2025": 47.4
+ },
+ "units_coverage": {
+  "new_building_permits": {
+   "rows": 11585,
+   "units_present_pct": 55.9,
+   "units_numeric_pct": 55.9,
+   "units_positive_pct": 55.6,
+   "units_zero_rows": 31
+  },
+  "demolition_permits": {
+   "rows": 3836,
+   "units_present_pct": 41.4,
+   "units_numeric_pct": 41.4,
+   "units_positive_pct": 40.5,
+   "units_zero_rows": 33
+  }
+ },
+ "zero_backstop_neighborhoods": {
+  "neighborhoods": [
+   "Auraria",
+   "Barnum West",
+   "Belcaro",
+   "Cory - Merrill",
+   "Country Club",
+   "Goldsmith",
+   "Hilltop",
+   "Indian Creek",
+   "Kennedy",
+   "Marston",
+   "North Park Hill",
+   "Southmoor Park",
+   "Washington Park",
+   "Wellshire",
+   "Windsor"
+  ],
+  "count": 15,
+  "demolished_parcels_in_them": 758,
+  "share_of_all_demolished_pct": 23.1,
+  "paired_cycles_in_them": 260,
+  "paired_median_spread_in_them": 1948750.0,
+  "paired_median_spread_elsewhere": 1382500.0,
+  "removed_buys_le500k_in_them": 62,
+  "removed_with_buy_in_them": 569
+ },
+ "below_citywide_backstop_rate": {
+  "threshold_per_1000": 82.0,
+  "neighborhoods": 49,
+  "demolished_parcels_in_them": 2519,
+  "share_of_all_demolished_pct": 76.8
+ },
+ "spearman_teardown_rate_vs_restricted_rate_min30demo": -0.35,
+ "censoring": {
+  "demolitions_final_12_months": 459,
+  "rebuilt_share_final_12_months_pct": 46.0,
+  "demolitions_earlier": 2822,
+  "rebuilt_share_earlier_pct": 74.9
+ },
+ "boundary_sales_section_12_2": {
+  "on_demolition_date": 0,
+  "on_permit_date": 1,
+  "between_demolition_and_permit": 76
+ },
+ "boundary_tie_rule": {
+  "rule": "Among market sales tied on a boundary date: nominal prices (<= $100) never win when another tied sale exceeds $100; then highest RECEPTION_NUM wins on the buy side, lowest on the exit side.",
+  "counts_across_lifecycle_and_removed_passes": {
+   "buy_ties": 101,
+   "buy_nominal_excluded": 5,
+   "exit_ties": 1,
+   "exit_nominal_excluded": 0
+  },
+  "origin": "Independent verifier found a 2-parcel discrepancy in the at-or-under-$500K removed count (422 vs 424) traced to same-day deed clusters; 56 demolished parcels have more than one market sale on their last pre-demolition date, 51 of them at differing prices."
+ },
+ "successor_rebuilds": {
+  "spine_successor_rebuild_flag_on_demolished_parcels": 0,
+  "missing_side_citywide": {
+   "rebuilt": 2326,
+   "with_buy": 1424,
+   "with_exit": 1019,
+   "paired": 616
+  },
+  "missing_side_under10paired_neighborhoods": {
+   "rebuilt": 497,
+   "with_buy": 208,
+   "with_exit": 207,
+   "paired": 47
+  },
+  "under10paired_neighborhoods": [
+   "Baker",
+   "Cherry Creek",
+   "Cole",
+   "Congress Park",
+   "Country Club",
+   "Five Points",
+   "Highland",
+   "Overland",
+   "Rosedale",
+   "South Park Hill",
+   "Speer",
+   "Villa Park",
+   "West Colfax"
+  ]
+ },
+ "paired_share_in_zero_backstop_pct": 42.2,
+ "top6_combined": {
+  "neighborhoods": [
+   "Washington Park",
+   "Cory - Merrill",
+   "University Park",
+   "Belcaro",
+   "Hilltop",
+   "Platt Park"
+  ],
+  "demolished": 879,
+  "paired_cycles": 311,
+  "restricted_units_combined": 27,
+  "zero_restricted_among_them": 4
+ },
+ "focus_neighborhoods_detail": [
+  {
+   "neighborhood": "Berkeley",
+   "demolished": 218.0,
+   "rebuilt": 179.0,
+   "paired_n": 47.0,
+   "removed_with_buy_n": 122.0,
+   "removed_median_buy": 570000.0,
+   "removed_le500k_share_pct": 31.97,
+   "restricted_units": 129,
+   "restricted_per_1000_units": 26.9
+  },
+  {
+   "neighborhood": "Sunnyside",
+   "demolished": 150.0,
+   "rebuilt": 120.0,
+   "paired_n": 14.0,
+   "removed_with_buy_n": 72.0,
+   "removed_median_buy": 603551.0,
+   "removed_le500k_share_pct": 34.72,
+   "restricted_units": 691,
+   "restricted_per_1000_units": 129.7
+  },
+  {
+   "neighborhood": "Baker",
+   "demolished": 30.0,
+   "rebuilt": 13.0,
+   "paired_n": 0.0,
+   "removed_with_buy_n": 13.0,
+   "removed_median_buy": 690120.0,
+   "removed_le500k_share_pct": 23.08,
+   "restricted_units": 521,
+   "restricted_per_1000_units": 124.0
+  },
+  {
+   "neighborhood": "Cherry Creek",
+   "demolished": 65.0,
+   "rebuilt": 31.0,
+   "paired_n": 3.0,
+   "removed_with_buy_n": 21.0,
+   "removed_median_buy": 1525000.0,
+   "removed_le500k_share_pct": 0.0,
+   "restricted_units": 360,
+   "restricted_per_1000_units": 68.2
+  },
+  {
+   "neighborhood": "Five Points",
+   "demolished": 72.0,
+   "rebuilt": 17.0,
+   "paired_n": 3.0,
+   "removed_with_buy_n": 33.0,
+   "removed_median_buy": 1050000.0,
+   "removed_le500k_share_pct": 15.15,
+   "restricted_units": 2757,
+   "restricted_per_1000_units": 176.2
+  },
+  {
+   "neighborhood": "Highland",
+   "demolished": 94.0,
+   "rebuilt": 62.0,
+   "paired_n": 8.0,
+   "removed_with_buy_n": 44.0,
+   "removed_median_buy": 700000.0,
+   "removed_le500k_share_pct": 11.36,
+   "restricted_units": 276,
+   "restricted_per_1000_units": 39.0
+  },
+  {
+   "neighborhood": "Overland",
+   "demolished": 84.0,
+   "rebuilt": 59.0,
+   "paired_n": 2.0,
+   "removed_with_buy_n": 15.0,
+   "removed_median_buy": 459000.0,
+   "removed_le500k_share_pct": 66.67,
+   "restricted_units": 119,
+   "restricted_per_1000_units": 57.3
+  },
+  {
+   "neighborhood": "Rosedale",
+   "demolished": 34.0,
+   "rebuilt": 27.0,
+   "paired_n": 0.0,
+   "removed_with_buy_n": 9.0,
+   "removed_median_buy": 625000.0,
+   "removed_le500k_share_pct": 22.22,
+   "restricted_units": 6,
+   "restricted_per_1000_units": 4.1
+  },
+  {
+   "neighborhood": "Villa Park",
+   "demolished": 33.0,
+   "rebuilt": 21.0,
+   "paired_n": 0.0,
+   "removed_with_buy_n": 10.0,
+   "removed_median_buy": 445000.0,
+   "removed_le500k_share_pct": 80.0,
+   "restricted_units": 544,
+   "restricted_per_1000_units": 175.4
+  },
+  {
+   "neighborhood": "West Colfax",
+   "demolished": 119.0,
+   "rebuilt": 72.0,
+   "paired_n": 5.0,
+   "removed_with_buy_n": 38.0,
+   "removed_median_buy": 807000.0,
+   "removed_le500k_share_pct": 23.68,
+   "restricted_units": 1621,
+   "restricted_per_1000_units": 225.6
+  }
+ ],
+ "qualifying_neighborhoods_ranked": 16,
+ "neighborhoods_with_30plus_demolitions": 29,
+ "neighborhoods_with_30plus_demolitions_but_under_10_paired": 13,
+ "top10_index": [
+  {
+   "neighborhood": "Washington Park",
+   "index": 89.6,
+   "demolished": 268.0,
+   "teardown_rate_per_1000_parcels": 75.03,
+   "paired_n": 87.0,
+   "paired_median_buy": 1000000.0,
+   "paired_median_sell": 3100000.0,
+   "paired_median_spread": 2140000.0,
+   "restricted_units": 0,
+   "restricted_per_1000_units": 0.0
+  },
+  {
+   "neighborhood": "Cory - Merrill",
+   "index": 83.3,
+   "demolished": 139.0,
+   "teardown_rate_per_1000_parcels": 71.43,
+   "paired_n": 73.0,
+   "paired_median_buy": 635000.0,
+   "paired_median_sell": 2435000.0,
+   "paired_median_spread": 1810000.0,
+   "restricted_units": 0,
+   "restricted_per_1000_units": 0.0
+  },
+  {
+   "neighborhood": "University Park",
+   "index": 77.1,
+   "demolished": 129.0,
+   "teardown_rate_per_1000_parcels": 51.54,
+   "paired_n": 50.0,
+   "paired_median_buy": 785000.0,
+   "paired_median_sell": 3125000.0,
+   "paired_median_spread": 2432250.0,
+   "restricted_units": 23,
+   "restricted_per_1000_units": 4.8
+  },
+  {
+   "neighborhood": "Belcaro",
+   "index": 75.0,
+   "demolished": 100.0,
+   "teardown_rate_per_1000_parcels": 40.63,
+   "paired_n": 38.0,
+   "paired_median_buy": 835000.0,
+   "paired_median_sell": 2845000.0,
+   "paired_median_spread": 2010235.0,
+   "restricted_units": 0,
+   "restricted_per_1000_units": 0.0
+  },
+  {
+   "neighborhood": "Hilltop",
+   "index": 72.9,
+   "demolished": 104.0,
+   "teardown_rate_per_1000_parcels": 34.29,
+   "paired_n": 34.0,
+   "paired_median_buy": 902500.0,
+   "paired_median_sell": 3132500.0,
+   "paired_median_spread": 2295787.5,
+   "restricted_units": 0,
+   "restricted_per_1000_units": 0.0
+  },
+  {
+   "neighborhood": "Platt Park",
+   "index": 66.7,
+   "demolished": 139.0,
+   "teardown_rate_per_1000_parcels": 47.04,
+   "paired_n": 29.0,
+   "paired_median_buy": 650000.0,
+   "paired_median_sell": 2199000.0,
+   "paired_median_spread": 1550000.0,
+   "restricted_units": 4,
+   "restricted_per_1000_units": 1.1
+  },
+  {
+   "neighborhood": "Berkeley",
+   "index": 41.7,
+   "demolished": 218.0,
+   "teardown_rate_per_1000_parcels": 50.18,
+   "paired_n": 47.0,
+   "paired_median_buy": 525000.0,
+   "paired_median_sell": 1610000.0,
+   "paired_median_spread": 1163250.0,
+   "restricted_units": 129,
+   "restricted_per_1000_units": 26.9
+  },
+  {
+   "neighborhood": "Sloan Lake",
+   "index": 41.7,
+   "demolished": 152.0,
+   "teardown_rate_per_1000_parcels": 46.93,
+   "paired_n": 37.0,
+   "paired_median_buy": 630000.0,
+   "paired_median_sell": 2115000.0,
+   "paired_median_spread": 1470000.0,
+   "restricted_units": 339,
+   "restricted_per_1000_units": 78.7
+  },
+  {
+   "neighborhood": "West Highland",
+   "index": 39.6,
+   "demolished": 98.0,
+   "teardown_rate_per_1000_parcels": 24.91,
+   "paired_n": 19.0,
+   "paired_median_buy": 650000.0,
+   "paired_median_sell": 2100000.0,
+   "paired_median_spread": 1495000.0,
+   "restricted_units": 45,
+   "restricted_per_1000_units": 7.8
+  },
+  {
+   "neighborhood": "Washington Park West",
+   "index": 39.6,
+   "demolished": 109.0,
+   "teardown_rate_per_1000_parcels": 34.92,
+   "paired_n": 12.0,
+   "paired_median_buy": 633250.0,
+   "paired_median_sell": 1632743.5,
+   "paired_median_spread": 1144493.0,
+   "restricted_units": 15,
+   "restricted_per_1000_units": 3.5
+  }
+ ],
+ "sun_valley": [
+  {
+   "demolished": 11.0,
+   "rebuilt": 0.0,
+   "paired_n": 0.0,
+   "restricted_units": 1196,
+   "restricted_per_1000_units": 2378.2
+  }
+ ]
+}
